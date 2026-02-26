@@ -1,41 +1,51 @@
 <template>
   <article class="w-full overflow-x-hidden bg-figma-bg font-sans px-2.5">
-    <!-- Hero: Image left, Text right on figma-beige -->
-    <section class="bg-figma-beige relative flex flex-col md:flex-row min-h-[360px] md:min-h-[420px] items-center">
-      <div class="relative w-full md:w-[660px] h-[280px] sm:h-[320px] md:h-[420px] flex-shrink-0 overflow-hidden order-1">
+    <!-- Hero: 50/50 desktop, stacked mobile. Badge centered between divs on all screens -->
+    <section class="bg-figma-beige relative flex flex-col md:flex-row min-h-0 md:h-[420px] items-stretch overflow-visible border-t-[2px] border-b-[2px] border-black">
+      <!-- Image: fixed height on mobile, fills half on desktop -->
+      <div class="relative w-full md:w-1/2 h-[220px] sm:h-[260px] md:h-full flex-shrink-0 overflow-hidden order-1">
         <img
-          src="https://www.figma.com/api/mcp/asset/b4e5b1e0-0a65-4b93-bff0-446a8253ceba"
-          alt="Bonbon NYC packaging"
+          src="/hero-screenshot.png"
+          alt="Bon Bon gift boxes on silver tray"
           class="w-full h-full object-cover object-center"
         />
       </div>
-      <div class="flex flex-col items-center justify-center flex-1 px-6 md:px-16 py-8 md:py-16 order-2">
-        <p class="text-[12px] md:text-[13px] text-figma-muted tracking-[0.5px] uppercase mb-3 md:mb-4">The Sweet Wrap: Custom Packaging</p>
-        <h1 class="text-3xl sm:text-4xl md:text-[56px] leading-tight md:leading-[67px] text-figma-text text-center font-normal max-w-[635px]">
+      <!-- Text: flows below image on mobile, half width on desktop, smaller & centered -->
+      <div class="flex flex-col justify-center items-center text-center flex-1 md:w-1/2 px-6 sm:px-8 md:px-16 lg:px-20 py-8 sm:py-10 md:py-16 order-2">
+        <p class="text-[11px] sm:text-[12px] md:text-[13px] text-figma-muted tracking-[0.5px] uppercase mb-2 sm:mb-3 md:mb-4">The Sweet Wrap: Custom Packaging</p>
+        <h1 class="font-['Playfair_Display',serif] text-xl sm:text-2xl md:text-[40px] leading-tight md:leading-[1.2] text-figma-text font-normal">
           For Bonbon NYC<br />By Half Price Packaging
         </h1>
       </div>
-      <!-- Bon Bon logo centered on the seam between image and text -->
+      <!-- Bon Bon badge: center between two divs - at image bottom on mobile, section bottom on desktop -->
       <div
-        class="absolute z-10 -translate-x-1/2 -translate-y-1/2 left-1/2 top-[280px] sm:top-[320px] md:left-[660px] md:top-auto md:bottom-0 md:translate-y-0"
+        class="absolute z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-y-0 top-[220px] sm:top-[260px] md:top-auto md:bottom-4 flex items-center justify-center"
       >
-        <div class="bg-white rounded-[56px] md:rounded-[70px] p-1.5 md:p-2 shadow-[0px_4px_12px_0px_rgba(0,0,0,0.05)]">
-          <div class="border-2 border-dashed border-figma-pink-border rounded-[48px] md:rounded-[62px] p-[5px] md:p-[7px]">
-            <img
-              src="https://www.figma.com/api/mcp/asset/ec3d52a0-5bdd-4b15-9240-e1d427065140"
-              alt="Bonbon logo"
-              class="w-[88px] h-[88px] md:w-[110px] md:h-[110px] rounded-[44px] md:rounded-[55px] object-cover block"
+        <div class="bonbon-badge relative w-[100px] h-[100px] md:w-[120px] md:h-[120px] flex items-center justify-center">
+          <svg viewBox="0 0 120 120" class="absolute inset-0 w-full h-full" aria-hidden="true">
+            <!-- 12-lobe scalloped circle: alternating outer peaks and inner valleys -->
+            <path
+              fill="white"
+              stroke="#e8a0a8"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+              d="M 110 60 L 113.1 74.2 L 103.3 85 L 98.9 98.9 L 85 103.3 L 74.2 113.1 L 60 110 L 45.8 113.1 L 35 103.3 L 21.1 98.9 L 16.7 85 L 6.9 74.2 L 10 60 L 6.9 45.8 L 16.7 35 L 21.1 21.1 L 35 16.7 L 45.8 6.9 L 60 10 L 74.2 6.9 L 85 16.7 L 98.9 21.1 L 103.3 35 L 113.1 45.8 Z"
+              style="filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08))"
             />
+          </svg>
+          <div class="relative z-10 flex flex-col items-center justify-center text-center px-2">
+            <span class="font-['Great_Vibes',cursive] text-[#1e3a5f] text-[22px] md:text-[26px] leading-[1.1]">Bon Bon</span>
+            <span class="text-[#1e3a5f] text-[6px] md:text-[7px] font-medium tracking-[0.12em] uppercase mt-0.5">A Swedish Candy Co.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Clients Feedback: Image first on mobile, content below -->
-    <section class="py-12 md:py-[70px] px-4 md:px-12">
-      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-        <div class="flex-1 order-2 md:order-1 w-full">
-          <h2 class="text-2xl md:text-[44px] text-figma-text font-normal mb-4 md:mb-6">Clients Feedback</h2>
+    <!-- Clients Feedback: Image first on mobile, tall rectangle in its own section -->
+    <section class="md:py-[7px] px-4 md:px-12">
+      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-8 md:gap-16 md:items-stretch">
+        <div class="flex-1 order-2 md:order-1 w-full flex flex-col justify-center">
+          <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-normal mb-4 md:mb-6">Clients Feedback</h2>
           <div class="flex justify-start mb-6">
             <img
               src="https://www.figma.com/api/mcp/asset/7610a415-eb01-4cbf-a58f-da8c99b3ac8d"
@@ -51,89 +61,106 @@
           <p class="text-[15px] font-medium text-figma-text">Robert Persson, Leonard Schaltz, and Selim Adira</p>
           <p class="text-[14px] text-figma-muted">Partners & Founders Of Bon Bon</p>
         </div>
-        <div class="bg-figma-pink flex-1 w-full h-[280px] md:h-[360px] flex items-center justify-center min-h-[220px] md:min-h-[260px] order-1 md:order-2">
+        <!-- Image: tall rectangle, fills its div within section -->
+        <div class="relative flex-1 w-full min-h-[380px] md:min-h-[540px] overflow-hidden order-1 md:order-2">
           <img
-            src="https://www.figma.com/api/mcp/asset/c04fc052-4155-4c59-a950-91bdfcb3f658"
+            src="/section-2-right.png"
             alt="Bon Bon gift boxes"
-            class="max-h-[299px] max-w-[410px] w-full object-contain mix-blend-multiply"
+            class="w-full h-full object-cover object-center"
           />
         </div>
       </div>
     </section>
 
     <!-- Challenges and Solution -->
-    <section class="bg-figma-beige py-12 md:py-[70px] px-4 md:px-12">
-      <div class="max-w-[1000px] mx-auto flex flex-col md:flex-row gap-6 md:gap-8">
-        <div class="flex-1 bg-white border border-black/5 rounded-lg pb-8 md:pb-10 pt-8 md:pt-[50px] px-6 md:px-8">
-          <h3 class="text-2xl md:text-[36px] text-figma-text font-normal text-center pb-4 md:pb-6 border-b-2 border-figma-pink-accent">Challenges</h3>
-          <ul class="mt-6 space-y-4">
+    <section class="bg-[#F5F0E1] py-12 md:py-[70px] px-4 md:px-12 border-t-[2px] border-b-[2px] border-black">
+      <div class="max-w-[1000px] mx-auto flex flex-col md:flex-row gap-8 md:gap-12">
+        <!-- Challenges card -->
+        <div class="flex-1 bg-[#FDF8ED] border border-[#2a2a2a] pt-10 md:pt-12 pb-10 md:pb-12 px-8 md:px-10">
+          <h3 class="font-['Playfair_Display',serif] text-2xl md:text-[36px] text-figma-text font-normal text-center mb-4">Challenges</h3>
+          <div class="w-[75%] h-[1px] bg-[#2a2a2a] mx-auto mb-8"></div>
+          <ul class="space-y-5">
             <li class="flex gap-4">
-              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full bg-figma-dot flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="text-white"><path d="M3 7h8M7 3v8" stroke="currentColor" stroke-width="2"/></svg>
+              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full border-2 border-[#2a2a2a] flex items-center justify-center mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="text-[#2a2a2a]"><path d="M2 2l6 6M8 2L2 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </span>
-              <span class="text-[15px] leading-6 text-figma-gray">Finding ethical materials that matched vegan and sustainable values required careful effort.</span>
+              <span class="text-[15px] leading-6 text-figma-text">Finding ethical materials that matched vegan and sustainable values required careful effort.</span>
             </li>
             <li class="flex gap-4">
-              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full bg-figma-dot flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="text-white"><path d="M3 7h8M7 3v8" stroke="currentColor" stroke-width="2"/></svg>
+              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full border-2 border-[#2a2a2a] flex items-center justify-center mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="text-[#2a2a2a]"><path d="M2 2l6 6M8 2L2 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </span>
-              <span class="text-[15px] leading-6 text-figma-gray">To use vegetable-based inks challenged traditional printing techniques, all while promoting recyclability.</span>
+              <span class="text-[15px] leading-6 text-figma-text">To use vegetable-based inks challenged traditional printing techniques, all while promoting recyclability.</span>
             </li>
             <li class="flex gap-4">
-              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full bg-figma-dot flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="text-white"><path d="M3 7h8M7 3v8" stroke="currentColor" stroke-width="2"/></svg>
+              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full border-2 border-[#2a2a2a] flex items-center justify-center mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="text-[#2a2a2a]"><path d="M2 2l6 6M8 2L2 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </span>
-              <span class="text-[15px] leading-6 text-figma-gray">Sourcing natural colorants required sharp design while ensuring eco-friendly and sustainable standards.</span>
+              <span class="text-[15px] leading-6 text-figma-text">Sourcing natural colorants required sharp design while ensuring eco-friendly and sustainable standards.</span>
             </li>
           </ul>
         </div>
-        <div class="flex-1 bg-white border border-black/5 rounded-lg pb-10 md:pb-12 pt-8 md:pt-[50px] px-6 md:px-8">
-          <h3 class="text-2xl md:text-[36px] text-figma-text font-normal text-center pb-4 md:pb-6 border-b-2 border-figma-pink-accent">Solution</h3>
-          <ul class="mt-6 space-y-4">
+        <!-- Solution card -->
+        <div class="flex-1 bg-[#FDF8ED] border border-[#2a2a2a] pt-10 md:pt-12 pb-10 md:pb-12 px-8 md:px-10">
+          <h3 class="font-['Playfair_Display',serif] text-2xl md:text-[36px] text-figma-text font-normal text-center mb-4">Solution</h3>
+          <div class="w-[75%] h-[1px] bg-[#2a2a2a] mx-auto mb-8"></div>
+          <ul class="space-y-5">
             <li class="flex gap-4">
-              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full bg-figma-dot flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="text-white"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full border-2 border-[#2a2a2a] flex items-center justify-center mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="text-[#2a2a2a]"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <span class="text-[15px] leading-6 text-figma-gray">We used eco-friendly soy-based ink to make Bon Bon's branding stand out.</span>
+              <span class="text-[15px] leading-6 text-figma-text">We used eco-friendly soy-based ink to make Bon Bon's branding stand out.</span>
             </li>
             <li class="flex gap-4">
-              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full bg-figma-dot flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="text-white"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full border-2 border-[#2a2a2a] flex items-center justify-center mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="text-[#2a2a2a]"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <span class="text-[15px] leading-6 text-figma-gray">Chemical-free inks created a glossy embossed logo while preserving sustainability.</span>
+              <span class="text-[15px] leading-6 text-figma-text">Chemical-free inks created a glossy embossed logo while preserving sustainability.</span>
             </li>
             <li class="flex gap-4">
-              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full bg-figma-dot flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="text-white"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full border-2 border-[#2a2a2a] flex items-center justify-center mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="text-[#2a2a2a]"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <span class="text-[15px] leading-6 text-figma-gray">Natural colorants maintained bold aesthetics without compromising eco-standards.</span>
+              <span class="text-[15px] leading-6 text-figma-text">Natural colorants maintained bold aesthetics without compromising eco-standards.</span>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- The Journey of Bonbon: Image first on mobile, content below -->
-    <section class="py-12 md:py-[70px] px-4 md:px-12">
-      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-        <div class="flex-1 order-1 md:order-1 w-full">
+    <!-- The Journey of Bonbon: Collage left, text & icons right. White bg. -->
+    <section class="bg-white py-12 md:py-[70px] px-4 md:px-12">
+      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-8 md:gap-16 md:items-stretch">
+        <!-- Left: Image -->
+        <div class="flex-1 order-1 md:order-1 w-full max-w-[500px] mx-auto md:mx-0 md:max-w-none flex items-center">
           <img
-            src="https://www.figma.com/api/mcp/asset/9254d057-97ae-45e2-bf8a-469ee82e01af"
-            alt="Bon Bon candies"
-            class="w-full max-w-[500px] mx-auto aspect-square object-cover rounded-lg"
+            src="/section-4-left.png"
+            alt="Bon Bon candies and store display"
+            class="w-full max-h-[360px] md:max-h-[420px] object-contain object-center rounded-lg"
           />
         </div>
-        <div class="flex-1 order-2 md:order-2 w-full">
-          <h2 class="text-2xl md:text-[44px] text-figma-text font-normal mb-4 md:mb-6">The Journey of Bonbon</h2>
-          <div class="flex gap-5 mb-6">
-            <div class="w-14 h-14 rounded-full border border-figma-pink-border flex items-center justify-center">📦</div>
-            <div class="w-14 h-14 rounded-full border border-figma-pink-border flex items-center justify-center">✈</div>
-            <div class="w-14 h-14 rounded-full border border-figma-pink-border flex items-center justify-center">🏪</div>
+        <!-- Right: Heading, icons (Instagram, Web, Message), text -->
+        <div class="flex-1 order-2 md:order-2 w-full flex flex-col justify-center">
+          <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-bold mb-6">The Journey of Bonbon</h2>
+          <div class="flex gap-4 mb-6">
+            <a href="#" class="w-14 h-14 rounded-full bg-figma-pink flex items-center justify-center text-white shrink-0 hover:opacity-90 transition-opacity" aria-label="Instagram">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="w-14 h-14 rounded-full bg-figma-pink flex items-center justify-center text-white shrink-0 hover:opacity-90 transition-opacity" aria-label="Website">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+            </a>
+            <a href="#" class="w-14 h-14 rounded-full bg-figma-pink flex items-center justify-center text-white shrink-0 hover:opacity-90 transition-opacity" aria-label="Message">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            </a>
           </div>
-          <p class="text-[15px] leading-6 text-figma-gray mb-6 max-w-[507px]">
+          <p class="text-[15px] leading-6 text-figma-text mb-6 max-w-[507px]">
             BonBon is a Swedish candy brand bringing classic sweet delicacies to the U.S. When three friends couldn't find a piece of their home here, they brought it themselves in the form of BonBon. By importing directly from Sweden, BonBon ensures the same quality, fun, and taste found in traditional Scandinavian sweets.
           </p>
-          <p class="text-[15px] leading-6 text-figma-gray max-w-[473px]">
+          <p class="text-[15px] leading-6 text-figma-text max-w-[473px]">
             Founded in 2017, BonBon is inclusive at heart, offering many sweet treats that are vegan and gluten-free, so everyone can satisfy their sweet cravings.
           </p>
         </div>
@@ -142,116 +169,121 @@
 
     <!-- CTA: Your Challenge, Our Packaging Expertise -->
     <section
-      class="py-12 md:py-[70px] px-4 md:px-12"
-      style="background: linear-gradient(90deg, #f7efe6 0%, #f7efe6 4.17%, #eeb8b8 4.17%, #eeb8b8 5.56%)"
+      class="py-12 md:py-[70px] px-4 md:px-12 flex items-center justify-center border-t-[2px] border-b-[2px] border-black"
+      style="background: repeating-linear-gradient(90deg, #F5F0E1 0px, #F5F0E1 36px, #e8c4c4 36px, #e8c4c4 42px, #F5F0E1 42px, #F5F0E1 48px, #e8c4c4 48px, #e8c4c4 54px, #F5F0E1 54px, #F5F0E1 96px)"
     >
-      <div class="flex justify-center">
-        <div class="bg-white border border-black/5 rounded-lg shadow-[0px_4px_24px_0px_rgba(0,0,0,0.05)] max-w-[600px] w-full py-8 md:py-10 pt-10 md:pt-14 px-6 md:px-10 text-center">
-          <h2 class="text-2xl md:text-[44px] leading-tight md:leading-[57px] text-figma-text font-normal mb-5 md:mb-6">
+      <div class="flex justify-center w-full">
+        <div class="bg-[#f7efe6] max-w-[600px] w-full py-10 md:py-12 px-6 md:px-10 text-center" style="box-shadow: inset 0 0 0 1px #c4a882">
+          <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] leading-tight md:leading-[57px] text-figma-text font-normal mb-5 md:mb-6">
             Your Challenge, Our<br />Packaging Expertise
           </h2>
+          <div class="w-full max-w-[85%] h-px bg-[#c4a882] mx-auto mb-6 md:mb-8"></div>
           <button
             type="button"
-            class="bg-figma-button text-white text-sm md:text-base px-8 md:px-10 py-3 md:py-4 rounded-[32px] font-normal inline-flex items-center gap-2 hover:opacity-90 transition-opacity w-full sm:w-auto justify-center"
+            class="bg-[#cab5a2] text-[#f7efe6] text-sm md:text-base px-8 md:px-10 py-3 md:py-4 rounded-full font-normal inline-flex items-center gap-2 hover:opacity-90 transition-opacity w-full sm:w-auto justify-center border-0 outline-none focus:ring-0 focus:outline-none"
           >
-            Start Your Challenge &gt;
+            State Your Challenge
+            <svg class="w-5 h-5 opacity-80" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
           </button>
         </div>
       </div>
     </section>
 
     <!-- Packaging We Came Up With: Image first on mobile, specs below -->
-    <section class="py-12 md:py-[70px] pt-16 md:pt-[90px] px-4 md:px-12">
+    <section class="bg-white py-12 md:py-[70px] pt-16 md:pt-[90px] px-4 md:px-12">
       <div class="max-w-[1200px] mx-auto">
-        <h2 class="text-2xl md:text-[44px] text-figma-text font-normal mb-8 md:mb-10">Packaging We Came Up With</h2>
+        <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-bold mb-6 md:mb-8">Packaging We Came Up With</h2>
         <div class="flex flex-col md:flex-row gap-8 md:gap-20">
-          <div class="flex-1 border-t-2 border-figma-pink-accent order-2 md:order-1 overflow-x-auto">
-            <div class="flex flex-col sm:flex-row sm:items-center border-t border-figma-pink-accent py-3 md:py-4 gap-1 sm:gap-0">
-              <div class="sm:w-[280px] flex-shrink-0">
-                <span class="text-[15px] text-figma-gray">Box Type</span>
+          <div class="flex-1 order-2 md:order-1 overflow-x-auto">
+            <div class="flex flex-col sm:flex-row sm:items-start border-b border-[#c94c4c] py-2 md:py-2.5 gap-1 sm:gap-0">
+              <div class="sm:w-[180px] flex-shrink-0">
+                <span class="text-[14px] md:text-[15px] text-figma-text">Box Type</span>
               </div>
-              <div class="flex-1">
-                <span class="text-[15px] text-figma-text">Gift Box</span>
-              </div>
-            </div>
-            <div class="flex flex-col sm:flex-row sm:items-center border-t border-figma-pink-accent py-3 md:py-4 gap-1 sm:gap-0">
-              <div class="sm:w-[280px] flex-shrink-0">
-                <span class="text-[15px] text-figma-gray">Dimensions</span>
-              </div>
-              <div class="flex-1">
-                <span class="text-[15px] text-figma-text leading-[22px]">150 × 150 × 50 mm</span>
+              <div class="flex-1 text-right sm:text-right">
+                <span class="text-[14px] md:text-[15px] text-figma-text">Tuck Box</span>
               </div>
             </div>
-            <div class="flex flex-col sm:flex-row sm:items-center border-t border-figma-pink-accent py-3 md:py-4 gap-1 sm:gap-0">
-              <div class="sm:w-[280px] flex-shrink-0">
-                <span class="text-[15px] text-figma-gray">Material & GSM</span>
+            <div class="flex flex-col sm:flex-row sm:items-start border-b border-[#c94c4c] py-2 md:py-2.5 gap-1 sm:gap-0">
+              <div class="sm:w-[180px] flex-shrink-0">
+                <span class="text-[14px] md:text-[15px] text-figma-text">Dimensions</span>
               </div>
-              <div class="flex-1">
-                <span class="text-[15px] text-figma-text">Kraft board, 350 GSM</span>
+              <div class="flex-1 flex items-start justify-end gap-2">
+                <span class="text-[14px] md:text-[15px] text-figma-text leading-[20px] md:leading-[22px] text-right max-w-[260px] md:max-w-[280px]">Internal size: 200 × 120 × 80 mm External size: 205 × 125 × 85 mm</span>
+                <svg class="w-3.5 h-3.5 text-gray-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5H7z"/></svg>
               </div>
             </div>
-            <div class="flex flex-col sm:flex-row sm:items-center border-t border-figma-pink-accent py-3 md:py-4 gap-1 sm:gap-0">
-              <div class="sm:w-[280px] flex-shrink-0">
-                <span class="text-[15px] text-figma-gray">Printing Specifications</span>
+            <div class="flex flex-col sm:flex-row sm:items-center border-b border-[#c94c4c] py-2 md:py-2.5 gap-1 sm:gap-0">
+              <div class="sm:w-[180px] flex-shrink-0">
+                <span class="text-[14px] md:text-[15px] text-figma-text">Material Specifications</span>
               </div>
               <div class="flex-1"></div>
             </div>
-            <div class="flex flex-col sm:flex-row sm:items-center border-t border-figma-pink-accent py-3 md:py-4 gap-1 sm:gap-0">
-              <div class="sm:w-[280px] flex-shrink-0">
-                <span class="text-[15px] text-figma-gray">Finishing & Surface Treatment</span>
+            <div class="flex flex-col sm:flex-row sm:items-center border-b border-[#c94c4c] py-2 md:py-2.5 gap-1 sm:gap-0">
+              <div class="sm:w-[180px] flex-shrink-0">
+                <span class="text-[14px] md:text-[15px] text-figma-text">Printing Specifications</span>
               </div>
               <div class="flex-1"></div>
             </div>
-            <div class="flex flex-col sm:flex-row sm:items-center border-t border-figma-pink-accent py-3 md:py-4 gap-1 sm:gap-0">
-              <div class="sm:w-[280px] flex-shrink-0">
-                <span class="text-[15px] text-figma-gray">Special Features</span>
+            <div class="flex flex-col sm:flex-row sm:items-center border-b border-[#c94c4c] py-2 md:py-2.5 gap-1 sm:gap-0">
+              <div class="sm:w-[180px] flex-shrink-0">
+                <span class="text-[14px] md:text-[15px] text-figma-text">Finishing & Surface Treatment</span>
               </div>
               <div class="flex-1"></div>
             </div>
-            <div class="flex flex-col sm:flex-row sm:items-center border-t border-figma-pink-accent py-3 md:py-4 gap-1 sm:gap-0">
-              <div class="sm:w-[280px] flex-shrink-0">
-                <span class="text-[15px] text-figma-gray">Branding Placement</span>
+            <div class="flex flex-col sm:flex-row sm:items-center border-b border-[#c94c4c] py-2 md:py-2.5 gap-1 sm:gap-0">
+              <div class="sm:w-[180px] flex-shrink-0">
+                <span class="text-[14px] md:text-[15px] text-figma-text">Special Features</span>
               </div>
               <div class="flex-1"></div>
             </div>
-            <div class="flex flex-col sm:flex-row sm:items-center border-t border-b border-figma-pink-accent py-3 md:py-4 gap-1 sm:gap-0">
-              <div class="sm:w-[280px] flex-shrink-0">
-                <span class="text-[15px] text-figma-gray">Weight & Load Capacity</span>
+            <div class="flex flex-col sm:flex-row sm:items-center border-b border-[#c94c4c] py-2 md:py-2.5 gap-1 sm:gap-0">
+              <div class="sm:w-[180px] flex-shrink-0">
+                <span class="text-[14px] md:text-[15px] text-figma-text">Branding Placement</span>
+              </div>
+              <div class="flex-1"></div>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center border-b border-[#c94c4c] py-2 md:py-2.5 gap-1 sm:gap-0">
+              <div class="sm:w-[180px] flex-shrink-0">
+                <span class="text-[14px] md:text-[15px] text-figma-text">Weight & Load Capacity</span>
               </div>
               <div class="flex-1"></div>
             </div>
           </div>
-          <div class="flex-1 flex items-center justify-center order-1 md:order-2">
+          <div class="flex-1 flex items-center justify-center order-1 md:order-2 overflow-hidden">
             <img
-              src="https://www.figma.com/api/mcp/asset/dc02b89d-cac2-440a-9c53-58182e67d645"
+              src="/section-5-right.png"
               alt="Bon Bon gift box"
-              class="max-w-[461px] max-h-[280px] md:max-h-[336px] w-full object-contain"
+              class="max-w-[520px] max-h-[320px] md:max-h-[400px] w-full object-contain border-0 outline-none"
             />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Bringing It All Together: Image first on mobile, content below -->
-    <section class="bg-white flex flex-col md:flex-row min-h-[360px] md:min-h-[420px]">
-      <div class="w-full md:w-[50%] h-[280px] md:h-[420px] flex-shrink-0 overflow-hidden order-1">
+    <!-- Bringing It All Together: Left image, Right text - same height -->
+    <section class="flex flex-col md:flex-row border-t-[2px] border-b-[2px] border-black">
+      <!-- Left: Image fills full height (~35% width), no background -->
+      <div class="w-full md:w-[35%] h-[260px] md:h-[380px] flex-shrink-0 overflow-hidden order-1">
         <img
-          src="https://www.figma.com/api/mcp/asset/a287a609-19de-46a7-9851-eaaf5d0ae440"
-          alt="Bon Bon packaging display - stack of pastel boxes"
+          src="/section-6-left.png"
+          alt="Bon Bon packaging display - stack of pastel boxes on pink bag"
           class="w-full h-full object-cover object-center"
         />
       </div>
-      <div class="flex-1 flex flex-col justify-center px-6 md:px-16 py-8 md:py-14 bg-white order-2">
-        <h2 class="text-2xl md:text-[44px] text-figma-text font-normal mb-4 md:mb-6">Bringing It All Together</h2>
-        <p class="text-[15px] leading-6 text-figma-gray mb-4">
-          The partnership between Bon Bon and Half Price Packaging shows what happens when values and design come together. Since the beginning, the two teams had a simple objective: design packaging that is both beautiful and premium while remaining ethical. The result stood out on shelves and demonstrated Bon Bon's commitment to sustainability and care.
-        </p>
-        <p class="text-[15px] leading-6 text-figma-gray mb-4">
-          Seeing their vision come to life was a proud moment for everyone involved. The packaging captured attention, strengthened brand identity, and delivered exactly what Bon Bon imagined, without compromise.
-        </p>
-        <p class="text-[15px] leading-6 text-figma-gray">
-          If you run a bakery or sweets brand and feel your packaging does not fully represent who you are, we can help you change that. Our team turns ideas into packaging that feels authentic and memorable.
-        </p>
+      <!-- Right: Same height as left, light beige background -->
+      <div class="w-full md:w-[65%] h-[260px] md:h-[380px] flex flex-col justify-center bg-[#f7efe6] order-2 relative border-l border-[#e8ddd0] overflow-hidden">
+        <div class="px-6 md:px-12 lg:px-14 py-4 md:py-6">
+          <h2 class="font-['Playfair_Display',serif] text-xl md:text-[36px] text-figma-text font-normal mb-3 md:mb-4 text-left">Bringing It All Together</h2>
+          <p class="text-[13px] md:text-[14px] leading-[1.5] text-figma-text mb-3 md:mb-4">
+            The partnership between Bon Bon and Half Price Packaging shows what happens when values and design come together. Since the beginning, the two teams had a simple objective: design packaging that is both beautiful and premium while remaining ethical. The result stood out on shelves and demonstrated Bon Bon's commitment to sustainability and care.
+          </p>
+          <p class="text-[13px] md:text-[14px] leading-[1.5] text-figma-text mb-3 md:mb-4">
+            Seeing their vision come to life was a proud moment for everyone involved. The packaging captured attention, strengthened brand identity, and delivered exactly what Bon Bon imagined, without compromise.
+          </p>
+          <p class="text-[13px] md:text-[14px] leading-[1.5] text-figma-text">
+            If you run a bakery or sweets brand and feel your packaging does not fully represent who you are, we can help you change that. Our team turns ideas into packaging that feels authentic and memorable.
+          </p>
+        </div>
       </div>
     </section>
 
