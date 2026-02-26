@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-white text-figma-text border-t border-black/5">
     <!-- Main Footer Links - New Design Structure -->
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-14 flex flex-wrap gap-x-12 gap-y-8">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-12 py-10 md:py-14 flex flex-wrap gap-x-8 md:gap-x-12 gap-y-8">
       <div class="flex flex-col gap-4 min-w-[120px]">
         <h4 class="text-[14px] font-bold uppercase tracking-wide">Company</h4>
         <ul class="list-none p-0 m-0 flex flex-col gap-3">
@@ -60,7 +60,7 @@
 
     <!-- Where We Are Trusted + Get A Quote -->
     <div class="border-t border-black/5">
-      <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-6 flex flex-wrap justify-between items-center gap-4">
+      <div class="max-w-[1200px] mx-auto px-4 md:px-12 py-5 md:py-6 flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4">
         <div class="flex items-center gap-6">
           <span class="text-[14px] font-bold uppercase tracking-wide">Where We Are Trusted</span>
           <div class="flex gap-4 items-center">
@@ -88,8 +88,8 @@
     </div>
 
     <!-- Copyright Bar -->
-    <div class="border-t border-black/5 py-5">
-      <div class="max-w-[1200px] mx-auto px-6 md:px-12 flex justify-center md:justify-start items-center gap-4 text-[13px] text-figma-gray">
+    <div class="border-t border-black/5 py-4 md:py-5">
+      <div class="max-w-[1200px] mx-auto px-4 md:px-12 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-2 sm:gap-4 text-[12px] md:text-[13px] text-figma-gray text-center sm:text-left">
         <span>© 2023 Half Price Packaging</span>
         <a href="#" class="hover:underline no-underline">Terms of Conditions</a>
         <a href="#" class="hover:underline no-underline">Privacy Policy</a>
@@ -99,7 +99,7 @@
     <!-- Floating Chat Button -->
     <a
       href="#"
-      class="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-figma-green flex items-center justify-center shadow-lg hover:opacity-90 transition-opacity"
+      class="fixed bottom-5 left-4 md:bottom-6 md:left-6 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full bg-figma-green flex items-center justify-center shadow-lg hover:opacity-90 transition-opacity touch-manipulation"
       aria-label="Chat"
     >
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
