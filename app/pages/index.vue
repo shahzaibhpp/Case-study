@@ -1,5 +1,5 @@
 <template>
-  <article class="w-full overflow-x-hidden bg-figma-bg font-sans px-2.5">
+  <article class="w-full overflow-x-hidden bg-figma-bg font-sans px-4 md:px-2.5">
     <!-- Hero: 50/50 desktop, stacked mobile. Badge centered between divs on all screens -->
     <section class="bg-figma-beige relative flex flex-col md:flex-row min-h-0 md:h-[420px] items-stretch overflow-visible border-t-[2px] border-b-[2px] border-black">
       <!-- Image: fixed height on mobile, fills half on desktop -->
@@ -11,7 +11,7 @@
         />
       </div>
       <!-- Text: flows below image on mobile, half width on desktop, smaller & centered -->
-      <div class="flex flex-col justify-center items-center text-center flex-1 md:w-1/2 px-6 sm:px-8 md:px-16 lg:px-20 py-8 sm:py-10 md:py-16 order-2">
+      <div class="flex flex-col justify-center items-center text-center flex-1 md:w-1/2 px-6 sm:px-8 md:px-16 lg:px-20 py-10 sm:py-10 md:py-16 order-2">
         <p class="text-[11px] sm:text-[12px] md:text-[13px] text-figma-muted tracking-[0.5px] uppercase mb-2 sm:mb-3 md:mb-4">The Sweet Wrap: Custom Packaging</p>
         <h1 class="font-['Playfair_Display',serif] text-xl sm:text-2xl md:text-[40px] leading-tight md:leading-[1.2] text-figma-text font-normal">
           For Bonbon NYC<br />By Half Price Packaging
@@ -30,7 +30,7 @@
     </section>
 
     <!-- Clients Feedback: Image first on mobile, tall rectangle in its own section -->
-    <section class="md:py-[7px] px-4 md:px-12">
+    <section class="py-8 md:py-[7px] px-4 md:px-12">
       <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-5 md:gap-10 md:items-stretch">
         <div class="flex-1 order-2 md:order-1 w-full flex flex-col justify-center">
           <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-normal mb-2 md:mb-4">Clients Feedback</h2>
@@ -62,9 +62,9 @@
 
     <!-- Challenges and Solution -->
     <section class="bg-[#F5F0E1] py-12 md:py-[70px] px-4 md:px-12 border-t-[2px] border-b-[2px] border-black">
-      <div class="max-w-[1000px] mx-auto flex flex-col md:flex-row gap-8 md:gap-12">
+      <div class="max-w-[1000px] mx-auto flex flex-col md:flex-row gap-6 md:gap-12">
         <!-- Challenges card -->
-        <div class="flex-1 bg-[#FDF8ED] border border-[#2a2a2a] pt-10 md:pt-12 pb-10 md:pb-12 px-8 md:px-10">
+        <div class="flex-1 bg-[#FDF8ED] border border-[#2a2a2a] pt-8 md:pt-12 pb-8 md:pb-12 px-5 md:px-10">
           <h3 class="font-['Playfair_Display',serif] text-2xl md:text-[36px] text-figma-text font-normal text-center mb-4">Challenges</h3>
           <div class="w-[75%] h-[1px] bg-[#2a2a2a] mx-auto mb-8"></div>
           <ul class="space-y-5">
@@ -89,7 +89,7 @@
           </ul>
         </div>
         <!-- Solution card -->
-        <div class="flex-1 bg-[#FDF8ED] border border-[#2a2a2a] pt-10 md:pt-12 pb-10 md:pb-12 px-8 md:px-10">
+        <div class="flex-1 bg-[#FDF8ED] border border-[#2a2a2a] pt-8 md:pt-12 pb-8 md:pb-12 px-5 md:px-10">
           <h3 class="font-['Playfair_Display',serif] text-2xl md:text-[36px] text-figma-text font-normal text-center mb-4">Solution</h3>
           <div class="w-[75%] h-[1px] bg-[#2a2a2a] mx-auto mb-8"></div>
           <ul class="space-y-5">
@@ -117,14 +117,14 @@
     </section>
 
     <!-- The Journey of Bonbon: Collage left, text & icons right. White bg. -->
-    <section class="bg-white py-4 md:py-6 px-4 md:px-12">
-      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-8 md:gap-16 md:items-stretch">
+    <section class="bg-white py-8 md:py-6 px-4 md:px-12">
+      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-6 md:gap-16 md:items-stretch">
         <!-- Left: Image -->
         <div class="flex-1 order-1 md:order-1 w-full max-w-[500px] mx-auto md:mx-0 md:max-w-none flex items-center">
           <img
             src="/img/the-journey-of-bonbon.png"
             alt="Bon Bon candies and store display"
-            class="w-full max-h-[420px] md:max-h-[520px] object-contain object-center rounded-lg"
+            class="w-full max-h-[280px] md:max-h-[520px] object-contain object-center rounded-lg"
           />
         </div>
         <!-- Right: Heading, icons (Instagram, Web, Message), text -->
@@ -161,14 +161,14 @@
       style="background-image: url('/img/pattern.png'); background-repeat: repeat; background-size: auto;"
     >
       <div class="flex justify-center w-full">
-        <div class="bg-white max-w-[600px] w-full py-10 md:py-12 px-6 md:px-10 text-center" style="box-shadow: inset 0 0 0 1px black">
+        <div class="bg-white max-w-[600px] w-full py-12 md:py-12 px-6 md:px-10 text-center" style="box-shadow: inset 0 0 0 1px black">
           <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] leading-tight md:leading-[57px] text-figma-text font-normal mb-5 md:mb-6">
             Your Challenge, Our<br />Packaging Expertise
           </h2>
           <div class="w-full max-w-[85%] h-px bg-black mx-auto mb-6 md:mb-8"></div>
           <button
             type="button"
-            class="bg-[#cab5a2] text-[#f7efe6] text-sm md:text-base px-8 md:px-10 py-3 md:py-4 rounded-full font-normal inline-flex items-center gap-2 hover:opacity-90 transition-opacity w-full sm:w-auto justify-center border-0 outline-none focus:ring-0 focus:outline-none"
+            class="bg-[#cab5a2] text-[#f7efe6] text-sm md:text-base px-8 md:px-10 py-3.5 md:py-4 rounded-full font-normal inline-flex items-center gap-2 hover:opacity-90 transition-opacity w-full sm:w-auto justify-center border-0 outline-none focus:ring-0 focus:outline-none min-h-[44px] md:min-h-0"
           >
             State Your Challenge
             <svg class="w-5 h-5 opacity-80" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
@@ -178,10 +178,10 @@
     </section>
 
     <!-- Packaging We Came Up With: Image first on mobile, specs below -->
-    <section class="bg-white py-12 md:py-[80px] pt-14 md:pt-[50px] px-4 md:px-12">
+    <section class="bg-white py-10 md:py-[80px] pt-10 md:pt-[50px] px-4 md:px-12">
       <div class="max-w-[1200px] mx-auto">
-        <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-bold mb-6 md:mb-8">Packaging We Came Up With</h2>
-        <div class="flex flex-col md:flex-row gap-8 md:gap-20">
+        <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-bold mb-5 md:mb-8">Packaging We Came Up With</h2>
+        <div class="flex flex-col md:flex-row gap-6 md:gap-20">
           <div class="flex-1 order-2 md:order-1 overflow-x-auto">
             <div class="flex flex-col sm:flex-row sm:items-start border-b border-[#c94c4c] py-2 md:py-2.5 gap-1 sm:gap-0">
               <div class="sm:w-[180px] flex-shrink-0">
@@ -260,8 +260,8 @@
         />
       </div>
       <!-- Right: Same height as left, light beige background -->
-      <div class="w-full md:w-[65%] h-[300px] md:h-[420px] flex flex-col justify-center bg-[#f7efe6] order-2 relative border-l border-[#e8ddd0] overflow-hidden">
-        <div class="px-6 md:px-12 lg:px-14 py-4 md:py-6">
+      <div class="w-full md:w-[65%] min-h-[300px] md:h-[420px] md:min-h-0 flex flex-col justify-center bg-[#f7efe6] order-2 relative border-l border-[#e8ddd0] overflow-visible md:overflow-hidden">
+        <div class="px-6 md:px-12 lg:px-14 py-5 md:py-6">
           <h2 class="font-['Playfair_Display',serif] text-xl md:text-[36px] text-figma-text font-normal mb-3 md:mb-4 text-left">Bringing It All Together</h2>
           <p class="text-[13px] md:text-[14px] leading-[1.5] text-figma-text mb-3 md:mb-4">
             The partnership between Bon Bon and Half Price Packaging shows what happens when values and design come together. Since the beginning, the two teams had a simple objective: design packaging that is both beautiful and premium while remaining ethical. The result stood out on shelves and demonstrated Bon Bon's commitment to sustainability and care.
