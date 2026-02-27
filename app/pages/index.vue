@@ -17,9 +17,9 @@
           For Bonbon NYC<br />By Half Price Packaging
         </h1>
       </div>
-      <!-- Bon Bon logo: centered at bottom, overlapping both divs (mix-blend removes black bg) -->
+      <!-- Bon Bon logo: centered at bottom, overlapping both divs; hidden on mobile -->
       <div
-        class="absolute z-10 left-1/2 -translate-x-1/2 bottom-0 translate-y-[30px] flex justify-center items-end"
+        class="hidden md:flex absolute z-10 left-1/2 -translate-x-1/2 bottom-0 translate-y-[30px] justify-center items-end"
       >
         <img
           src="/img/bonbon-logo.svg"
@@ -122,7 +122,7 @@
         <!-- Left: Image -->
         <div class="flex-1 order-1 md:order-1 w-full max-w-[500px] mx-auto md:mx-0 md:max-w-none flex items-center">
           <img
-            src="/img/the-journey-of-bonbon.png"
+            src="/webp/the-journey-of-bonbon.webp"
             alt="Bon Bon candies and store display"
             class="w-full max-h-[280px] md:max-h-[520px] object-contain object-center rounded-lg"
           />
@@ -158,7 +158,7 @@
     <!-- CTA: Your Challenge, Our Packaging Expertise -->
     <section
       class="py-12 md:py-[70px] px-4 md:px-12 flex items-center justify-center border-t-[2px] border-b-[2px] border-black bg-[#F5F0E1]"
-      style="background-image: url('/img/pattern.png'); background-repeat: repeat; background-size: auto;"
+      style="background-image: url('/webp/Pattern.webp'); background-repeat: repeat; background-size: auto;"
     >
       <div class="flex justify-center w-full">
         <div class="bg-white max-w-[600px] w-full py-12 md:py-12 px-6 md:px-10 text-center" style="box-shadow: inset 0 0 0 1px black">
@@ -239,7 +239,7 @@
           </div>
           <div class="flex-1 flex items-center justify-center order-1 md:order-2 overflow-hidden">
             <img
-              src="/img/packaging-we-came-up-with.png"
+              src="/webp/packaging-we-came-up-with.webp"
               alt="Bon Bon gift box"
               class="max-w-[520px] max-h-[320px] md:max-h-[400px] w-full object-contain border-0 outline-none"
             />
