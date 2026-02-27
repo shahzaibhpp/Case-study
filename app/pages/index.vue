@@ -5,7 +5,7 @@
       <!-- Image: fixed height on mobile, fills half on desktop -->
       <div class="relative w-full md:w-1/2 h-[220px] sm:h-[260px] md:h-full flex-shrink-0 overflow-hidden order-1">
         <img
-          src="/hero-screenshot.png"
+          src="/img/hero-section.jpg"
           alt="Bon Bon gift boxes on silver tray"
           class="w-full h-full object-cover object-center"
         />
@@ -17,36 +17,24 @@
           For Bonbon NYC<br />By Half Price Packaging
         </h1>
       </div>
-      <!-- Bon Bon badge: center between two divs - at image bottom on mobile, section bottom on desktop -->
+      <!-- Bon Bon logo: centered at bottom, overlapping both divs (mix-blend removes black bg) -->
       <div
-        class="absolute z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-y-0 top-[220px] sm:top-[260px] md:top-auto md:bottom-4 flex items-center justify-center"
+        class="absolute z-10 left-1/2 -translate-x-1/2 bottom-0 translate-y-[30px] flex justify-center items-end"
       >
-        <div class="bonbon-badge relative w-[100px] h-[100px] md:w-[120px] md:h-[120px] flex items-center justify-center">
-          <svg viewBox="0 0 120 120" class="absolute inset-0 w-full h-full" aria-hidden="true">
-            <!-- 12-lobe scalloped circle: alternating outer peaks and inner valleys -->
-            <path
-              fill="white"
-              stroke="#e8a0a8"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-              d="M 110 60 L 113.1 74.2 L 103.3 85 L 98.9 98.9 L 85 103.3 L 74.2 113.1 L 60 110 L 45.8 113.1 L 35 103.3 L 21.1 98.9 L 16.7 85 L 6.9 74.2 L 10 60 L 6.9 45.8 L 16.7 35 L 21.1 21.1 L 35 16.7 L 45.8 6.9 L 60 10 L 74.2 6.9 L 85 16.7 L 98.9 21.1 L 103.3 35 L 113.1 45.8 Z"
-              style="filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08))"
-            />
-          </svg>
-          <div class="relative z-10 flex flex-col items-center justify-center text-center px-2">
-            <span class="font-['Great_Vibes',cursive] text-[#1e3a5f] text-[22px] md:text-[26px] leading-[1.1]">Bon Bon</span>
-            <span class="text-[#1e3a5f] text-[6px] md:text-[7px] font-medium tracking-[0.12em] uppercase mt-0.5">A Swedish Candy Co.</span>
-          </div>
-        </div>
+        <img
+          src="/img/bonbon-logo.svg"
+          alt="Bon Bon - A Swedish Candy Co."
+          class="w-[340px] h-[340px] md:w-[420px] md:h-[420px] object-contain object-bottom drop-shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+        />
       </div>
     </section>
 
     <!-- Clients Feedback: Image first on mobile, tall rectangle in its own section -->
     <section class="md:py-[7px] px-4 md:px-12">
-      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-8 md:gap-16 md:items-stretch">
+      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-5 md:gap-10 md:items-stretch">
         <div class="flex-1 order-2 md:order-1 w-full flex flex-col justify-center">
-          <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-normal mb-4 md:mb-6">Clients Feedback</h2>
-          <div class="flex justify-start mb-6">
+          <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-normal mb-2 md:mb-4">Clients Feedback</h2>
+          <div class="flex justify-start mb-3">
             <img
               src="https://www.figma.com/api/mcp/asset/7610a415-eb01-4cbf-a58f-da8c99b3ac8d"
               alt="Quote"
@@ -55,16 +43,16 @@
               height="56"
             />
           </div>
-          <p class="text-[15px] leading-6 text-figma-gray mb-6 md:mb-8 max-w-[512px]">
+          <p class="text-[15px] leading-6 text-figma-gray mb-3 md:mb-5 max-w-[512px]">
             Half Price Packaging did an amazing job helping us present our brand in a way that truly reflects the quality and taste we offer to any candy lover in NYC. Their custom, detailed designs and premium finishes immediately let our customers know they're experiencing the very best. Their packaging helps us present and deliver our sweet delicacies with even more love and care.
           </p>
           <p class="text-[15px] font-medium text-figma-text">Robert Persson, Leonard Schaltz, and Selim Adira</p>
           <p class="text-[14px] text-figma-muted">Partners & Founders Of Bon Bon</p>
         </div>
         <!-- Image: tall rectangle, fills its div within section -->
-        <div class="relative flex-1 w-full min-h-[380px] md:min-h-[540px] overflow-hidden order-1 md:order-2">
+        <div class="relative flex-1 w-full min-h-[100px] md:min-h-[160px] overflow-hidden order-1 md:order-2">
           <img
-            src="/section-2-right.png"
+            src="/img/client-review.jpg"
             alt="Bon Bon gift boxes"
             class="w-full h-full object-cover object-center"
           />
@@ -129,20 +117,20 @@
     </section>
 
     <!-- The Journey of Bonbon: Collage left, text & icons right. White bg. -->
-    <section class="bg-white py-12 md:py-[70px] px-4 md:px-12">
+    <section class="bg-white py-4 md:py-6 px-4 md:px-12">
       <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-8 md:gap-16 md:items-stretch">
         <!-- Left: Image -->
         <div class="flex-1 order-1 md:order-1 w-full max-w-[500px] mx-auto md:mx-0 md:max-w-none flex items-center">
           <img
-            src="/section-4-left.png"
+            src="/img/the-journey-of-bonbon.png"
             alt="Bon Bon candies and store display"
-            class="w-full max-h-[360px] md:max-h-[420px] object-contain object-center rounded-lg"
+            class="w-full max-h-[420px] md:max-h-[520px] object-contain object-center rounded-lg"
           />
         </div>
         <!-- Right: Heading, icons (Instagram, Web, Message), text -->
         <div class="flex-1 order-2 md:order-2 w-full flex flex-col justify-center">
-          <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-bold mb-6">The Journey of Bonbon</h2>
-          <div class="flex gap-4 mb-6">
+          <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-bold mb-4">The Journey of Bonbon</h2>
+          <div class="flex gap-4 mb-4">
             <a href="#" class="w-14 h-14 rounded-full bg-figma-pink flex items-center justify-center text-white shrink-0 hover:opacity-90 transition-opacity" aria-label="Instagram">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -157,7 +145,7 @@
               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
             </a>
           </div>
-          <p class="text-[15px] leading-6 text-figma-text mb-6 max-w-[507px]">
+          <p class="text-[15px] leading-6 text-figma-text mb-4 max-w-[507px]">
             BonBon is a Swedish candy brand bringing classic sweet delicacies to the U.S. When three friends couldn't find a piece of their home here, they brought it themselves in the form of BonBon. By importing directly from Sweden, BonBon ensures the same quality, fun, and taste found in traditional Scandinavian sweets.
           </p>
           <p class="text-[15px] leading-6 text-figma-text max-w-[473px]">
@@ -169,15 +157,15 @@
 
     <!-- CTA: Your Challenge, Our Packaging Expertise -->
     <section
-      class="py-12 md:py-[70px] px-4 md:px-12 flex items-center justify-center border-t-[2px] border-b-[2px] border-black"
-      style="background: repeating-linear-gradient(90deg, #F5F0E1 0px, #F5F0E1 36px, #e8c4c4 36px, #e8c4c4 42px, #F5F0E1 42px, #F5F0E1 48px, #e8c4c4 48px, #e8c4c4 54px, #F5F0E1 54px, #F5F0E1 96px)"
+      class="py-12 md:py-[70px] px-4 md:px-12 flex items-center justify-center border-t-[2px] border-b-[2px] border-black bg-[#F5F0E1]"
+      style="background-image: url('/img/pattern.png'); background-repeat: repeat; background-size: auto;"
     >
       <div class="flex justify-center w-full">
-        <div class="bg-[#f7efe6] max-w-[600px] w-full py-10 md:py-12 px-6 md:px-10 text-center" style="box-shadow: inset 0 0 0 1px #c4a882">
+        <div class="bg-white max-w-[600px] w-full py-10 md:py-12 px-6 md:px-10 text-center" style="box-shadow: inset 0 0 0 1px black">
           <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] leading-tight md:leading-[57px] text-figma-text font-normal mb-5 md:mb-6">
             Your Challenge, Our<br />Packaging Expertise
           </h2>
-          <div class="w-full max-w-[85%] h-px bg-[#c4a882] mx-auto mb-6 md:mb-8"></div>
+          <div class="w-full max-w-[85%] h-px bg-black mx-auto mb-6 md:mb-8"></div>
           <button
             type="button"
             class="bg-[#cab5a2] text-[#f7efe6] text-sm md:text-base px-8 md:px-10 py-3 md:py-4 rounded-full font-normal inline-flex items-center gap-2 hover:opacity-90 transition-opacity w-full sm:w-auto justify-center border-0 outline-none focus:ring-0 focus:outline-none"
@@ -190,7 +178,7 @@
     </section>
 
     <!-- Packaging We Came Up With: Image first on mobile, specs below -->
-    <section class="bg-white py-12 md:py-[70px] pt-16 md:pt-[90px] px-4 md:px-12">
+    <section class="bg-white py-12 md:py-[80px] pt-14 md:pt-[50px] px-4 md:px-12">
       <div class="max-w-[1200px] mx-auto">
         <h2 class="font-['Playfair_Display',serif] text-2xl md:text-[44px] text-figma-text font-bold mb-6 md:mb-8">Packaging We Came Up With</h2>
         <div class="flex flex-col md:flex-row gap-8 md:gap-20">
@@ -251,7 +239,7 @@
           </div>
           <div class="flex-1 flex items-center justify-center order-1 md:order-2 overflow-hidden">
             <img
-              src="/section-5-right.png"
+              src="/img/packaging-we-came-up-with.png"
               alt="Bon Bon gift box"
               class="max-w-[520px] max-h-[320px] md:max-h-[400px] w-full object-contain border-0 outline-none"
             />
@@ -263,15 +251,16 @@
     <!-- Bringing It All Together: Left image, Right text - same height -->
     <section class="flex flex-col md:flex-row border-t-[2px] border-b-[2px] border-black">
       <!-- Left: Image fills full height (~35% width), no background -->
-      <div class="w-full md:w-[35%] h-[260px] md:h-[380px] flex-shrink-0 overflow-hidden order-1">
+      <div class="w-full md:w-[35%] h-[300px] md:h-[420px] flex-shrink-0 overflow-hidden order-1">
         <img
-          src="/section-6-left.png"
+          src="/img/bringing-it-all-together.jpg"
           alt="Bon Bon packaging display - stack of pastel boxes on pink bag"
-          class="w-full h-full object-cover object-center"
+          class="w-full h-full object-cover"
+          style="object-position: center 35%"
         />
       </div>
       <!-- Right: Same height as left, light beige background -->
-      <div class="w-full md:w-[65%] h-[260px] md:h-[380px] flex flex-col justify-center bg-[#f7efe6] order-2 relative border-l border-[#e8ddd0] overflow-hidden">
+      <div class="w-full md:w-[65%] h-[300px] md:h-[420px] flex flex-col justify-center bg-[#f7efe6] order-2 relative border-l border-[#e8ddd0] overflow-hidden">
         <div class="px-6 md:px-12 lg:px-14 py-4 md:py-6">
           <h2 class="font-['Playfair_Display',serif] text-xl md:text-[36px] text-figma-text font-normal mb-3 md:mb-4 text-left">Bringing It All Together</h2>
           <p class="text-[13px] md:text-[14px] leading-[1.5] text-figma-text mb-3 md:mb-4">
