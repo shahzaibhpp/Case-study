@@ -97,19 +97,19 @@
               <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full border-2 border-[#2a2a2a] flex items-center justify-center mt-0.5">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="text-[#2a2a2a]"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <span class="text-[15px] leading-6 text-figma-text">We used eco-friendly soy-based ink to make Bon Bon's branding stand out.</span>
+              <span class="text-[15px] leading-6 text-figma-text">We provided fully vegan, eco-friendly materials that met Bon Bon's ethical standards while ensuring reliability and high quality.</span>
             </li>
             <li class="flex gap-4">
               <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full border-2 border-[#2a2a2a] flex items-center justify-center mt-0.5">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="text-[#2a2a2a]"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <span class="text-[15px] leading-6 text-figma-text">Chemical-free inks created a glossy embossed logo while preserving sustainability.</span>
+              <span class="text-[15px] leading-6 text-figma-text">We used eco-friendly soy-based ink to meet their requirements, helping Bon Bon logos and design on the packaging pop out.</span>
             </li>
             <li class="flex gap-4">
               <span class="flex-shrink-0 w-[22px] h-[22px] rounded-full border-2 border-[#2a2a2a] flex items-center justify-center mt-0.5">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="text-[#2a2a2a]"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <span class="text-[15px] leading-6 text-figma-text">Natural colorants maintained bold aesthetics without compromising eco-standards.</span>
+              <span class="text-[15px] leading-6 text-figma-text">Chemical-free inks were used, resulting in a blue, glossy, embossed logo that kept the color and design vibrant while preserving the planet.</span>
             </li>
           </ul>
         </div>
